@@ -1,0 +1,44 @@
+"use client";
+import { motion, Variants } from "framer-motion";
+import { FeatureCardProps } from "@/types/features";
+import FeatureIcon from "./FeatureIcon";
+import FeatureTitle from "./FeatureTitle";
+import FeatureDescription from "./FeatureDescription";
+
+export const ANIMATION_VARIANTS = {
+  container: {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  } as Variants,
+  item: {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  } as Variants,
+};
+
+const FeatureCard: React.FC<FeatureCardProps> = ({ feature }) => (
+  <motion.div
+    variants={ANIMATION_VARIANTS.item}
+    whileHover={{ y: -8, transition: { duration: 0.3 } }}
+    className="group"
+  >
+    <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 h-full transition-all duration-300 hover:shadow-xl hover:border-blue-200">
+      <FeatureIcon icon={feature.icon} />
+      <FeatureTitle text={feature.title} />
+      <FeatureDescription text={feature.description} />
+    </div>
+  </motion.div>
+);
+export default FeatureCard;
