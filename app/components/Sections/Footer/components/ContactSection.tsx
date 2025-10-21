@@ -1,11 +1,10 @@
-'use client'
-import {motion} from 'framer-motion'
-import ContactItem from './ContactItem';
-import { ANIMATION_VARIANTS } from './LogoSection';
-import { Contactitem } from './ContactItem';
-interface ContactSectionProps {
-  contacts: Contactitem[];
-}
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
+import { ContactSectionProps } from "@/types/footer";
+import { ANIMATION_VARIANTS } from "../../../ui/TopBadge";
+import ContactItem from "../../../ui/ContactItem";
 
 const ContactSection: React.FC<ContactSectionProps> = ({ contacts }) => (
   <motion.div variants={ANIMATION_VARIANTS.fadeInUp}>
@@ -17,4 +16,4 @@ const ContactSection: React.FC<ContactSectionProps> = ({ contacts }) => (
     </ul>
   </motion.div>
 );
-export default ContactSection
+export default ContactSection;

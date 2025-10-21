@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 // Предполагаем, что установка шрифтов через next/font корректна.
 import { Geist_Mono } from "next/font/google"; // Используем Geist_Mono из Google Fonts как пример
 import "./globals.css";
-import Header from "./components/ui/Header/Header";
-import Footer from "./components/ui/Footer";
+import Header from "./components/Sections/Header/Header";
+import Footer from "./components/Sections/Footer/Footer";
 
 // Инициализируем Geist (предполагая, что это локальный шрифт, как часто бывает)
 

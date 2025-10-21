@@ -1,17 +1,12 @@
-"use client";
+'use client'
+
+import React from "react";
 import { motion } from "framer-motion";
 import NavItem from "./NavItem";
-import { ANIMATION_VARIANTS } from "./LogoSection";
-import { Navitem } from "./NavItem";
-interface NavigationSectionProps {
-  items: Navitem[];
-  onNavClick: (href: string) => void;
-}
+import { ANIMATION_VARIANTS } from "../../../ui/TopBadge";
+import { NavigationSectionProps } from "@/types/footer";
 
-const NavigationSection: React.FC<NavigationSectionProps> = ({
-  items,
-  onNavClick,
-}) => (
+const NavigationSection: React.FC<NavigationSectionProps> = ({ items, onNavClick }) => (
   <motion.div variants={ANIMATION_VARIANTS.fadeInUp}>
     <h4 className="font-bold text-gray-900 mb-5 text-lg">Навигация</h4>
     <ul className="space-y-3">

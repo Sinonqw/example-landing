@@ -1,9 +1,12 @@
+// FeatureCard.tsx
+
 "use client";
 import { motion, Variants } from "framer-motion";
 import { FeatureCardProps } from "@/types/features";
 import FeatureIcon from "./FeatureIcon";
-import FeatureTitle from "./FeatureTitle";
-import FeatureDescription from "./FeatureDescription";
+import Title from "@/app/components/ui/Title";
+import TextBlock from "@/app/components/ui/TextBlock";
+import React from "react";
 
 export const ANIMATION_VARIANTS = {
   container: {
@@ -36,9 +39,14 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ feature }) => (
   >
     <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 h-full transition-all duration-300 hover:shadow-xl hover:border-blue-200">
       <FeatureIcon icon={feature.icon} />
-      <FeatureTitle text={feature.title} />
-      <FeatureDescription text={feature.description} />
+
+      <Title as="h3" context="feature">
+        {feature.title}
+      </Title>
+
+      <TextBlock size="small">{feature.description}</TextBlock>
     </div>
   </motion.div>
 );
+
 export default FeatureCard;

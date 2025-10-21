@@ -1,5 +1,5 @@
-import CloseIcon from "../icons/CloseIcon";
-import MenuIcon from "../icons/MenuIcon";
+import CloseIcon from "../../../ui/icons/CloseIcon";
+import MenuIcon from "../../../ui/icons/MenuIcon";
 import { MobileMenuButtonProps } from "@/types/header";
 
 const MobileMenuButton: React.FC<MobileMenuButtonProps> = ({

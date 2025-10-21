@@ -1,9 +1,7 @@
+import type { NavItem } from "@/types/footer";
 import { ArrowRight } from "lucide-react";
-export interface Navitem {
-  name: string;
-  href: string;
-}
-const NavItem: React.FC<{ item: Navitem; onClick: (href: string) => void }> = ({
+
+const NavItem: React.FC<{ item: NavItem; onClick: (href: string) => void }> = ({
   item,
   onClick,
 }) => (

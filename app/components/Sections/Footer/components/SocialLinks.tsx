@@ -1,6 +1,8 @@
-import SocialIcon from "./SocialIcon";
-import { SocialLink } from "./SocialIcon";
-const SOCIAL_LINKS: SocialLink[] = [
+import SocialIcon from "../../../ui/icons/SocialIcon";
+
+import { SocialLink } from "@/types/footer";
+
+export const SOCIAL_LINKS: SocialLink[] = [
   { name: "facebook", href: "#facebook" },
   { name: "twitter", href: "#twitter" },
   { name: "linkedin", href: "#linkedin" },
@@ -14,4 +16,5 @@ const SocialLinks: React.FC = () => (
     ))}
   </div>
 );
+
 export default SocialLinks;

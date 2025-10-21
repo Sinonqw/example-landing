@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { ANIMATION_VARIANTS } from "./CTATitle";
+import { ANIMATION_VARIANTS } from "./CTASectionButton";
 
 interface CTADescriptionProps {
   text: string;

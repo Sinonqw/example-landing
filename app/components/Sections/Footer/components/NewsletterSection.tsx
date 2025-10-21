@@ -1,12 +1,9 @@
-"use client";
+'use client'
+import { NewsletterSectionProps } from "@/types/footer";
+import NewsletterInput from "../../../ui/NewsletterInput";
 import { motion } from "framer-motion";
-import { ANIMATION_VARIANTS } from "./LogoSection";
-import NewsletterInput from "./NewsletterInput";
-interface NewsletterSectionProps {
-  email: string;
-  onEmailChange: (email: string) => void;
-  onSubmit: () => void;
-}
+import { ANIMATION_VARIANTS } from "../../../ui/TopBadge";
+
 const NewsletterSection: React.FC<NewsletterSectionProps> = ({
   email,
   onEmailChange,
@@ -18,11 +15,7 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({
       Получайте наши последние новости, инсайты и обновления прямо на почту.
     </p>
     <div className="space-y-3">
-      <NewsletterInput
-        email={email}
-        onChange={onEmailChange}
-        onSubmit={onSubmit}
-      />
+      <NewsletterInput email={email} onChange={onEmailChange} onSubmit={onSubmit} />
     </div>
   </motion.div>
 );

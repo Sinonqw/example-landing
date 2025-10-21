@@ -1,9 +1,6 @@
-export interface Contactitem {
-  icon: React.ReactNode;
-  text: string;
-  href?: string;
-}
-const ContactItem: React.FC<{ contact: Contactitem }> = ({ contact }) => {
+import type { ContactItem } from "@/types/footer";
+
+const ContactItem: React.FC<{ contact: ContactItem }> = ({ contact }) => {
   const content = (
     <>
       {contact.icon}

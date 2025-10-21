@@ -1,10 +1,11 @@
 "use client";
 import { CTAContentProps } from "@/types/cta";
-import { ANIMATION_VARIANTS } from "./CTATitle";
+import { ANIMATION_VARIANTS } from "./CTASectionButton";
 import { motion } from "framer-motion";
-import CTATitle from "./CTATitle";
-import CTADescription from "./CTADescription";
+import Title from "@/app/components/ui/Title";
+import TextBlock from "@/app/components/ui/TextBlock"; 
 import CTAButton from "./CTASectionButton";
+import React from "react";
 
 const CTAContent: React.FC<CTAContentProps> = ({
   title,
@@ -20,8 +21,13 @@ const CTAContent: React.FC<CTAContentProps> = ({
     whileInView="visible"
     viewport={{ once: true, amount: 0.2 }}
   >
-    <CTATitle text={title} />
-    <CTADescription text={description} />
+    <Title as="h2" context="cta" isAnimated={true}>
+      {title}
+    </Title>
+    <TextBlock size="medium" isAnimated={true} className="text-white/80">
+      {description}
+    </TextBlock>
+
     <CTAButton
       text={buttonText}
       textColor={buttonTextColor}
@@ -29,4 +35,5 @@ const CTAContent: React.FC<CTAContentProps> = ({
     />
   </motion.div>
 );
+
 export default CTAContent;

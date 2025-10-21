@@ -1,6 +1,29 @@
 "use client";
 import { motion } from "framer-motion";
-import { ANIMATION_VARIANTS } from "./CTATitle";
+import { Variants } from "framer-motion";
+export const ANIMATION_VARIANTS = {
+  container: {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  } as Variants,
+  item: {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        duration: 0.7,
+      },
+    },
+  } as Variants,
+};
 
 interface CTASectionButtonProps {
   text: string;
