@@ -1,5 +1,3 @@
-// FeatureCard.tsx
-
 "use client";
 import { motion, Variants } from "framer-motion";
 import { FeatureCardProps } from "@/types/features";

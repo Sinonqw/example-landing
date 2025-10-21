@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-// ============ TYPES ============
 type LogoVariant = "header" | "footer";
 
 interface LogoProps {
@@ -9,7 +8,6 @@ interface LogoProps {
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-// ============ COMPONENT ============
 const Logo: React.FC<LogoProps> = ({
   variant = "header",
   accentColor = "indigo",
@@ -21,11 +19,7 @@ const Logo: React.FC<LogoProps> = ({
   };
 
   return (
-    <Link
-      href="/"
-      className={variantStyles[variant]}
-      onClick={onClick}
-    >
+    <Link href="/" className={variantStyles[variant]} onClick={onClick}>
       [Лого] **Проект**
     </Link>
   );
