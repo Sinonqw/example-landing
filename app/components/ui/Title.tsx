@@ -38,22 +38,27 @@ const Title: React.FC<TitleProps> = ({
   isAnimated = false,
   className = "",
 }) => {
+  // Базовый класс для цвета текста, который меняется в зависимости от темы
+  const baseTextColor = "text-gray-900 dark:text-white transition-colors duration-300";
+
   let contextClasses = "";
 
   switch (context) {
     case "hero":
-      contextClasses =
-        "text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight text-gray-900 mb-6";
+      // Герой: темный текст / белый текст
+      contextClasses = `text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight ${baseTextColor} mb-6`;
       break;
     case "feature":
-      contextClasses =
-        "text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300";
+      // Особенность: темный текст / светлый текст + эффект hover
+      contextClasses = `text-2xl font-bold ${baseTextColor} mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300`;
       break;
     case "cta":
+      // CTA: белый текст (обычно на темном фоне, не требует dark:)
       contextClasses = "text-4xl md:text-5xl font-extrabold text-white mb-6";
       break;
     default:
-      contextClasses = "text-3xl font-semibold text-gray-900 mb-4";
+      // По умолчанию: темный текст / светлый текст
+      contextClasses = `text-3xl font-semibold ${baseTextColor} mb-4`;
       break;
   }
 

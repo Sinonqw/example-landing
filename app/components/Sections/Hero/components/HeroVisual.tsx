@@ -13,8 +13,8 @@ const HeroVisual: React.FC = () => (
   >
     <div className="relative">
       <MainCard />
-      <FloatingStats count="500+" label="Проектов" />
-      <FloatingBadge text="⚡ Быстрый старт" />
+      <FloatingStats count="500+" label="Проєктів" />
+      <FloatingBadge text="⚡ Швидкий старт" />
     </div>
   </motion.div>
 );

@@ -10,8 +10,8 @@ const CTAButtons: React.FC<CTAButtonsProps> = ({ ctaLink, moreInfoLink }) => (
     variants={ANIMATION_VARIANTS.fadeInUp}
     className="flex flex-col sm:flex-row gap-4 mb-10"
   >
-    <PrimaryButton href={ctaLink} text="Начать Проект" />
-    <SecondaryButton href={moreInfoLink} text="Подробнее" />
+    <PrimaryButton href={ctaLink} text="Розпочати Проєкт" />
+    <SecondaryButton href={moreInfoLink} text="Детальніше" />
   </motion.div>
 );
 

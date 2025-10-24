@@ -10,7 +10,7 @@ const Hero: React.FC<HeroProps> = ({
   moreInfoLink = "#services",
 }) => {
   return (
-    <section className="bg-gradient-to-b from-white to-gray-50 py-20 md:py-32 overflow-hidden">
+    <section className="bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-black py-20 md:py-32 overflow-hidden transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center"

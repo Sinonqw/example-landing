@@ -9,12 +9,12 @@ const HeroContent: React.FC<CTAButtonsProps> = ({ ctaLink, moreInfoLink }) => (
   <div>
     <TopBadge />
     <Title as="h1" context="hero" isAnimated={true}>
-      Создаём решения, <span className="text-blue-600">которые работают</span>
+      Створюємо рішення, <span className="text-blue-600">які працюють</span>
     </Title>
 
-    <TextBlock size="large" isAnimated={true} className="text-gray-700 mb-8">
-      Универсальное агентство для любых ваших цифровых нужд. Мы строим будущее
-      вместе.
+    <TextBlock size="large" isAnimated={true} className="text-gray-700 dark:text-gray-300 mb-8 transition-colors duration-300">
+      Універсальне агентство для будь-яких ваших цифрових потреб. Ми будуємо майбутнє
+      разом.
     </TextBlock>
     <CTAButtons ctaLink={ctaLink} moreInfoLink={moreInfoLink} />
     <FeaturesList />

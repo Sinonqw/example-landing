@@ -8,11 +8,13 @@ const HeaderCTAButton: React.FC<CTAButtonProps> = ({
   <Link
     href="#cta"
     onClick={onClick}
-    className={`px-6 py-2 bg-${accentColor}-600 text-white text-base font-semibold rounded-full 
-              shadow-xl hover:bg-${accentColor}-700 transition duration-300 
-              transform hover:scale-[1.03] ring-2 ring-transparent hover:ring-${accentColor}-300`}
+    className={`px-6 py-2 
+              bg-indigo-600 text-white text-base font-semibold rounded-full 
+              shadow-xl hover:bg-indigo-700 transition duration-300 
+              transform hover:scale-[1.03] ring-2 ring-transparent hover:ring-indigo-300
+              dark:shadow-indigo-900/50`}
   >
-    Начать Проект
+    Розпочати Проєкт
   </Link>
 );
 
