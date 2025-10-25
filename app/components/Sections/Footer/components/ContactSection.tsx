@@ -8,7 +8,7 @@ import ContactItem from "../../../ui/ContactItem";
 
 const ContactSection: React.FC<ContactSectionProps> = ({ contacts }) => (
   <motion.div variants={ANIMATION_VARIANTS.fadeInUp}>
-    <h4 className="font-bold text-gray-900 dark:text-white mb-5 text-lg transition-colors duration-300">Зв'язок</h4>
+    <h4 className="font-bold text-gray-900 dark:text-white mb-5 text-lg transition-colors duration-300">Зв&aposязок</h4>
     <ul className="space-y-4">
       {contacts.map((contact, index) => (
         <ContactItem key={index} contact={contact} />
