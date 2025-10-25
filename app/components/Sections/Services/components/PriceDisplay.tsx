@@ -19,8 +19,8 @@ const PriceDisplay: React.FC<PriceDisplayProps> = ({
             isLongPrice 
               ? 'text-2xl sm:text-3xl lg:text-4xl' 
               : 'text-4xl sm:text-5xl'
-          } font-bold leading-tight ${
-            isRecommended ? "text-white" : "text-gray-900"
+          } font-bold leading-tight transition-colors duration-300 ${
+            isRecommended ? "text-white" : "text-gray-900 dark:text-white"
           }`}
           style={{ 
             hyphens: 'auto',
@@ -31,8 +31,8 @@ const PriceDisplay: React.FC<PriceDisplayProps> = ({
         </span>
         {period && (
           <span
-            className={`text-lg ${
-              isRecommended ? "text-blue-100" : "text-gray-600"
+            className={`text-lg transition-colors duration-300 ${
+              isRecommended ? "text-blue-100" : "text-gray-600 dark:text-gray-400"
             }`}
           >
             {period}

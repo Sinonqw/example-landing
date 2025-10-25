@@ -13,10 +13,12 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
     viewport={{ once: true, margin: "-100px" }}
     transition={{ duration: 0.6 }}
   >
-    <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+    <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">
       {title}
     </h2>
-    <p className="text-xl text-gray-600 max-w-3xl mx-auto">{description}</p>
+    <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto transition-colors duration-300">
+      {description}
+    </p>
   </motion.div>
 );
 export default SectionHeader;

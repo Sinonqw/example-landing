@@ -4,11 +4,14 @@ import PricingGrid from "./components/PricingGrid";
 
 const Services: React.FC = () => {
   return (
-    <section id="services" className="bg-white py-20 md:py-32">
+    <section
+      id="services"
+      className="bg-white dark:bg-gray-900 py-20 md:py-32 transition-colors duration-500"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          title="Наши Услуги / Продукты"
-          description="Выберите решение, которое подходит именно вам. Мы предлагаем гибкие варианты для любого масштаба задач."
+          title="Наші Послуги / Продукти"
+          description="Оберіть рішення, яке підходить саме вам. Ми пропонуємо гнучкі варіанти для будь-якого масштабу завдань."
         />
         <PricingGrid plans={PRICING_DATA} />
       </div>

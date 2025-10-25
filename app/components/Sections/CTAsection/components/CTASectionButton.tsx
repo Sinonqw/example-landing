@@ -38,7 +38,7 @@ const CTASectionButton: React.FC<CTASectionButtonProps> = ({
 }) => (
   <motion.button
     variants={ANIMATION_VARIANTS.item}
-    className={`inline-block px-12 py-4 bg-white ${textColor} font-bold text-lg rounded-xl shadow-2xl hover:bg-gray-100 transition duration-300 transform hover:scale-105`}
+    className={`inline-block px-12 py-4 bg-white ${textColor} font-bold text-lg rounded-xl shadow-2xl dark:shadow-black/70 hover:bg-gray-100 transition duration-300 transform hover:scale-105 mt-8`}
     onClick={onClick}
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}

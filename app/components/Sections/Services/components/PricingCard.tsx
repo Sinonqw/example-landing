@@ -44,8 +44,8 @@ const PricingCard: React.FC<PricingCardProps> = ({ plan }) => (
     <div
       className={`h-full flex flex-col rounded-2xl p-8 transition-all duration-300 ${
         plan.isRecommended
-          ? "bg-blue-600 text-white shadow-2xl border-2 border-blue-700"
-          : "bg-white shadow-lg border border-gray-200 hover:shadow-xl hover:border-blue-200"
+          ? "bg-blue-600 text-white shadow-2xl dark:shadow-blue-900/50 border-2 border-blue-700 dark:border-blue-500"
+          : "bg-white dark:bg-gray-800 shadow-lg dark:shadow-black/50 border border-gray-200 dark:border-gray-700 hover:shadow-xl hover:border-blue-200 dark:hover:border-blue-500"
       }`}
     >
       {plan.isRecommended && <RecommendedBadge />}

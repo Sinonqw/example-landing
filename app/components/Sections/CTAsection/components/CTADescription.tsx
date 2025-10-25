@@ -9,7 +9,7 @@ interface CTADescriptionProps {
 const CTADescription: React.FC<CTADescriptionProps> = ({ text }) => (
   <motion.p
     variants={ANIMATION_VARIANTS.item}
-    className="text-xl text-white/90 max-w-3xl mx-auto mb-10"
+    className="text-xl text-white/90 dark:text-white/95 max-w-3xl mx-auto mb-10 transition-colors duration-300"
   >
     {text}
   </motion.p>

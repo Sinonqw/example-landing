@@ -6,21 +6,21 @@ import { CheckCircle2, Zap, DollarSign } from "lucide-react";
 const FEATURES_DATA: FeatureItem[] = [
   {
     icon: <CheckCircle2 className="w-8 h-8 text-blue-600" />,
-    title: "Надежность и Качество",
+    title: "Надійність та Якість",
     description:
-      "Краткое описание преимущества 1. Здесь можно указать, что вы соблюдаете сроки или используете проверенные технологии.",
+      "Короткий опис переваги 1. Тут можна вказати, що ви дотримуєтеся термінів або використовуєте перевірені технології.",
   },
   {
     icon: <Zap className="w-8 h-8 text-blue-600" />,
-    title: "Скорость и Эффективность",
+    title: "Швидкість та Ефективність",
     description:
-      "Краткое описание преимущества 2. Например, оптимизированный процесс работы, который экономит время клиента.",
+      "Короткий опис переваги 2. Наприклад, оптимізований процес роботи, який заощаджує час клієнта.",
   },
   {
     icon: <DollarSign className="w-8 h-8 text-blue-600" />,
-    title: "Доступная Цена",
+    title: "Доступна Ціна",
     description:
-      "Краткое описание преимущества 3. Акцент на соотношении цены и ценности, которое вы предлагаете.",
+      "Короткий опис переваги 3. Акцент на співвідношенні ціни та цінності, яку ви пропонуєте.",
   },
 ];
 
@@ -28,12 +28,12 @@ const Features: React.FC = () => {
   return (
     <section
       id="features"
-      className="py-20 md:py-28 bg-gradient-to-b from-gray-50 to-white"
+      className="py-20 md:py-28 bg-white dark:bg-gray-900 transition-colors duration-500"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          title="Наши ключевые преимущества"
-          description="Краткое описание того, почему нас выбирают. Мы гарантируем качество и результат."
+          title="Наші ключові переваги"
+          description="Короткий опис того, чому нас обирають. Ми гарантуємо якість та результат."
         />
         <FeaturesGrid features={FEATURES_DATA} />
       </div>

@@ -35,7 +35,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => (
     whileHover={{ y: -8, transition: { duration: 0.3 } }}
     className="group"
   >
-    <div className="relative bg-white p-8 rounded-2xl shadow-lg border border-gray-100 h-full flex flex-col transition-all duration-300 hover:shadow-xl hover:border-blue-200">
+    <div className="relative bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg dark:shadow-black/50 border border-gray-100 dark:border-gray-700 h-full flex flex-col transition-all duration-300 hover:shadow-xl hover:border-blue-200 dark:hover:border-blue-500">
       <QuoteIcon />
       <StarRating rating={testimonial.rating} />
       <TestimonialQuote text={testimonial.quote} />

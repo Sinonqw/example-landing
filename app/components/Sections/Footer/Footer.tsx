@@ -12,10 +12,10 @@ import { NavItem, ContactItem } from "@/types/footer";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const FOOTER_NAV: NavItem[] = [
-  { name: "Главная", href: "#hero" },
-  { name: "Преимущества", href: "#features" },
-  { name: "Услуги", href: "#services" },
-  { name: "Отзывы", href: "#reviews" },
+  { name: "Головна", href: "#hero" },
+  { name: "Переваги", href: "#features" },
+  { name: "Послуги", href: "#services" },
+  { name: "Відгуки", href: "#reviews" },
 ];
 
 const CONTACT_INFO: ContactItem[] = [
@@ -30,12 +30,12 @@ const CONTACT_INFO: ContactItem[] = [
     icon: (
       <Phone className="w-5 h-5 mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
     ),
-    text: "+7 (999) 123-45-67",
-    href: "tel:+79991234567",
+    text: "+38 (044) 123-45-67",
+    href: "tel:+380441234567",
   },
   {
     icon: <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0" />,
-    text: "Город, Улица, 1",
+    text: "Місто, Вулиця, 1",
   },
 ];
 
@@ -59,14 +59,15 @@ const Footer: React.FC = () => {
 
   const handleSubmit = () => {
     if (email && email.includes("@")) {
-      console.log("Подписка оформлена на:", email);
-      alert(`Спасибо за подписку, ${email}!`);
+      console.log("Підписка оформлена на:", email);
+      // Замінено alert() на console.log, як вимагають інструкції
+      console.log(`Дякуємо за підписку, ${email}!`);
       setEmail("");
     }
   };
 
   return (
-    <footer className="bg-gradient-to-b from-gray-50 to-white pt-16 pb-8 border-t border-gray-200">
+    <footer className="bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-black pt-16 pb-8 border-t border-gray-200 dark:border-gray-700 transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12"

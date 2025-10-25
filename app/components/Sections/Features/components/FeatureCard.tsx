@@ -35,7 +35,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ feature }) => (
     whileHover={{ y: -8, transition: { duration: 0.3 } }}
     className="group"
   >
-    <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 h-full transition-all duration-300 hover:shadow-xl hover:border-blue-200">
+    <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg dark:shadow-black/30 border border-gray-100 dark:border-gray-700 h-full transition-all duration-300 hover:shadow-xl hover:border-blue-200 dark:hover:border-blue-500">
       <FeatureIcon icon={feature.icon} />
 
       <Title as="h3" context="feature">

@@ -16,14 +16,14 @@ const FeatureItem: React.FC<FeatureItemProps> = ({
       isRecommended={isRecommended}
     />
     <span
-      className={`text-base ${
+      className={`text-base transition-colors duration-300 ${
         isRecommended
           ? feature.isIncluded
             ? "text-white"
             : "text-blue-200 line-through"
           : feature.isIncluded
-          ? "text-gray-700"
-          : "text-gray-400 line-through"
+          ? "text-gray-700 dark:text-gray-300"
+          : "text-gray-400 dark:text-gray-500 line-through"
       }`}
     >
       {feature.text}

@@ -24,7 +24,8 @@ const CTAContent: React.FC<CTAContentProps> = ({
     <Title as="h2" context="cta" isAnimated={true}>
       {title}
     </Title>
-    <TextBlock size="medium" isAnimated={true} className="text-white/80">
+    {/* Адаптуємо колір тексту для TextBlock, оскільки Title (h2) вже адаптовано */}
+    <TextBlock size="medium" isAnimated={true} className="text-white/80 dark:text-white/90">
       {description}
     </TextBlock>
 

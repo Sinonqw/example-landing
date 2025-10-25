@@ -10,9 +10,9 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({
   onSubmit,
 }) => (
   <motion.div variants={ANIMATION_VARIANTS.fadeInUp}>
-    <h4 className="font-bold text-gray-900 mb-5 text-lg">Подписка</h4>
-    <p className="text-gray-600 mb-4 leading-relaxed">
-      Получайте наши последние новости, инсайты и обновления прямо на почту.
+    <h4 className="font-bold text-gray-900 dark:text-white mb-5 text-lg transition-colors duration-300">Підписка</h4>
+    <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed transition-colors duration-300">
+      Отримуйте наші останні новини, інсайти та оновлення прямо на пошту.
     </p>
     <div className="space-y-3">
       <NewsletterInput email={email} onChange={onEmailChange} onSubmit={onSubmit} />
