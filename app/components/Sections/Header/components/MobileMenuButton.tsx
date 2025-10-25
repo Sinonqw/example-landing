@@ -1,10 +1,9 @@
-import { Menu, X } from "lucide-react"; 
+import { Menu, X } from "lucide-react";
 import { MobileMenuButtonProps } from "@/types/header";
 
 const MobileMenuButton: React.FC<MobileMenuButtonProps> = ({
   isOpen,
   onClick,
-  accentColor,
 }) => (
   <button
     onClick={onClick}
@@ -22,7 +21,10 @@ const MobileMenuButton: React.FC<MobileMenuButtonProps> = ({
         aria-label="Закрити меню"
       />
     ) : (
-      <Menu className="w-7 h-7 text-gray-800 dark:text-gray-200" aria-label="Відкрити меню" />
+      <Menu
+        className="w-7 h-7 text-gray-800 dark:text-gray-200"
+        aria-label="Відкрити меню"
+      />
     )}
   </button>
 );

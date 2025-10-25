@@ -1,10 +1,7 @@
 import Link from "next/link";
 import { CTAButtonProps } from "@/types/header";
 
-const HeaderCTAButton: React.FC<CTAButtonProps> = ({
-  accentColor,
-  onClick,
-}) => (
+const HeaderCTAButton: React.FC<CTAButtonProps> = ({ onClick }) => (
   <Link
     href="#cta"
     onClick={onClick}

@@ -5,15 +5,10 @@ type LogoVariant = "header" | "footer";
 
 interface LogoProps {
   variant?: LogoVariant;
-  accentColor?: string;
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-const Logo: React.FC<LogoProps> = ({
-  variant = "header",
-  accentColor = "indigo",
-  onClick,
-}) => {
+const Logo: React.FC<LogoProps> = ({ variant = "header", onClick }) => {
   const headerClasses = `
     text-2xl font-black tracking-tight transition duration-200
     

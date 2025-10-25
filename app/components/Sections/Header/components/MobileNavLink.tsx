@@ -3,10 +3,8 @@ import { NavLinkProps } from "@/types/header";
 
 const MobileNavLink: React.FC<NavLinkProps & { onClick: () => void }> = ({
   item,
-  accentColor,
   onClick,
 }) => (
-  // Классы заменены на БЕЗОПАСНЫЕ СТРОКИ: indigo-600, gray-800
   <Link
     href={item.href}
     onClick={onClick}
